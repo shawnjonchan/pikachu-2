@@ -117,23 +117,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"css.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var string = ".skin * {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n.skin *::before,\n.skin *::after {\n  box-sizing: border-box;\n}\n.skin {\n  background:#ffcf00;\n  min-height:70vh;\n  position: relative;\n}\n.nose {\n  border: 10px solid black;\n  border-color: black transparent transparent;\n  border-bottom: none;\n  width: 0px;\n  height: 0px;\n  position: relative;\n  left: 50%;\n  top: 100px;\n  margin-left: -10px;\n  z-index: 10;\n}\n@keyframes noseWave {\n  0% {\n    transform: rotate(0deg);\n  }\n  33% {\n    transform: rotate(-5deg);\n  }\n  66% {\n    transform: rotate(5deg);\n  }\n  99% {\n    transform: rotate(0deg);\n  }\n}\n\n.nose:hover {\n  transform-origin: center bottom;\n  animation: noseWave 300ms infinite linear;\n}\n.yuan {\n  position: absolute;\n  width: 20px;\n  height: 6px;\n  top: -16px;\n  left: -10px;\n  border-radius: 10px 10px 0 0;\n  background: black;\n}\n.eye {\n  border: 2px solid #000;\n  width: 64px;\n  height: 64px;\n  position: absolute;\n  left: 50%;\n  top: 55px;\n  margin-left: -32px;\n  background: #2e2e2e;\n  border-radius: 50%;\n}\n.eye::before {\n  content: \"\";\n  display: block;\n  border: 3px solid #000;\n  width: 30px;\n  height: 30px;\n  background: #fff;\n  border-radius: 50%;\n  position: relative;\n  left: 4px;\n  top: 2px;\n  animation: eyeMove 3s infinite;\n}\n.eye.left {\n  transform: translateX(-100px);\n}\n.eye.right {\n  transform: translateX(100px);\n}\n@keyframes eyeMove {\n  0%,\n  100% {\n    top: 2px;\n    left: 2px;\n  }\n  30%,\n  60%,\n  70% {\n    top: 0;\n    left: 15px;\n  }\n  40% {\n    top: 0;\n    left: 15px;\n  }\n  50% {\n    top: 0;\n    left: 10px;\n  }\n  80%,\n  90% {\n    top: 17px;\n    left: 15px;\n  }\n}\n.mouth {\n  width: 200px;\n  height: 200px;\n  position: absolute;\n  left: 50%;\n  top: 125px;\n  margin-left: -100px;\n}\n.mouth .up {\n  position: relative;\n  top: -20px;\n  z-index: 1;\n}\n.mouth .up .lip {\n  border: 3px solid black;\n  height: 30px;\n  width: 100px;\n  background: #ffcf00;\n  border-top-color: transparent;\n  border-right-color: transparent;\n  position: relative;\n  position: absolute;\n  left: 50%;\n  margin-left: -50px;\n}\n.mouth .up .lip.left {\n  border-radius: 0 0 0 50px;\n  transform: rotate(-15deg) translateX(-53px);\n}\n.mouth .up .lip.right {\n  border-radius: 0 0 50px 0;\n  transform: rotate(15deg) translateX(53px);\n}\n.mouth .up .lip::before {\n  content: \"\";\n  display: block;\n  width: 7px;\n  height: 30px;\n  position: absolute;\n  bottom: 0;\n  background: #ffcf00;\n}\n.mouth .up .lip.left::before {\n  right: -6px;\n}\n.mouth .up .lip.right::before {\n  left: -6px;\n}\n.mouth .down {\n  height: 180px;\n  position: absolute;\n  top: 5px;\n  width: 100%;\n  overflow: hidden;\n  animation: mouthMove 3s infinite;\n}\n@keyframes mouthMove {\n  0%,\n  46%,\n  54%,\n  100% {\n    height: 180px;\n  }\n  50% {\n    height: 10px;\n  }\n}\n\n.mouth .down .yuan1 {\n  border: 3px solid black;\n  width: 150px;\n  height: 1000px;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  margin-left: -75px;\n  border-radius: 75px/300px;\n  background: #9b000a;\n  overflow: hidden;\n}\n.mouth .down .yuan1 .yuan2 {\n  width: 200px;\n  height: 300px;\n  background: #ff485f;\n  position: absolute;\n  bottom: -155px;\n  left: 50%;\n  margin-left: -100px;\n  border-radius: 100px;\n}\n.cheek {\n  position: absolute;\n  left: 50%;\n  border: 3px solid black;\n  width: 84px;\n  height: 84px;\n  top: 155px;\n  margin-left: -44px;\n  z-index: 3;\n  animation: cheekMove 3s infinite;\n}\n@keyframes cheekMove {\n  0%,\n  46%,\n  54%,\n  100% {\n    width: 84px;\n    height: 84px;\n    top: 200px;\n  }\n  50% {\n    width: 70px;\n    height: 70px;\n    top: 180px;\n  }\n}\n.cheek > img {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.cheek.left {\n  transform: translateX(-170px);\n  background: #ff0000;\n  border-radius: 50%;\n}\n.cheek.left > img {\n  transform: rotateY(170deg);\n  transform-origin: 0 0;\n}\n.cheek.right {\n  transform: translateX(170px);\n  background: #ff0000;\n  border-radius: 50%;\n}\n.hand {\n  position: absolute;\n  left: 50%;\n  top: 360px;\n  margin-left: -60px;\n  animation: handMove 1s infinite;\n}\n.hand.left {\n  transform: translateX(-90px);\n}\n.hand.right {\n  transform: translateX(96px) rotateY(180deg);\n}\n@keyframes handMove {\n  0%,\n  46%,\n  54%,\n  100% {\n    top: 360px;\n  }\n  50% {\n    top: 356px;\n  }\n}\n.box {\n  width: 100px;\n  height: 100px;\n  border: 3px solid #fff;\n  border-radius: 50%;\n  position: relative;\n  box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);\n  left: 50%;\n  top: 354px;\n  margin-left: -56px;\n  animation: box-rotate 4s ease-in-out infinite alternate;\n}\n@keyframes box-rotate {\n  0%,\n  90%,\n  100% {\n    transform: rotate(0deg);\n  }\n  40%,\n  50% {\n    transform: rotate(360deg);\n    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.9);\n  }\n}\n.box_main {\n  width: 98px;\n  height: 98px;\n  border-radius: 50%;\n  background: red;\n  border: 1px solid #333;\n  position: absolute;\n  top: 0;\n  left: 0;\n  overflow: hidden;\n}\n.box_main::before {\n  content: \"\";\n  display: block;\n  width: 98px;\n  height: 40px;\n  background: #fff;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n}\n.box_main::after {\n  content: \"\";\n  width: 98px;\n  height: 18px;\n  background: rgb(59, 53, 67);\n  position: absolute;\n  top: 50%;\n  left: 0;\n  margin-top: -6px;\n}\n.box_circle {\n  width: 36px;\n  height: 36px;\n  border: 4px solid rgb(59, 53, 67);\n  border-radius: 50%;\n  background: #fff;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  margin-left: -18px;\n  margin-top: -16px;\n  z-index: 5;\n}\n.box_circle::after {\n  content: \"\";\n  width: 18px;\n  height: 18px;\n  border: 1px solid rgb(59, 53, 67);\n  border-radius: 50%;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-left: -9px;\n  margin-top: -9px;\n  animation: bg_change 4s infinite;\n}\n@keyframes bg_change {\n  0%,\n  40%,\n  60%,\n  90%,\n  100% {\n    background: none;\n  }\n  50% {\n    background: red;\n  }\n}\n";
-var _default = string;
-exports.default = _default;
-},{}],"test.js":[function(require,module,exports) {
-"use strict";
-
-var _css = _interopRequireDefault(require("./css.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+})({"test.js":[function(require,module,exports) {
+var string = "/*\u4F60\u597D\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\uFF0C\n\u4ECA\u5929\u548C\u6211\u4E00\u8D77\u7528CSS\u753B\u4E00\u53EA\u53EF\u7231\u7684\u76AE\u5361\u4E18\u5427\n\u5148\u6765\u753B\u76AE\u5361\u4E18\u7684\u76AE\u80A4*/\n.skin {\n  background:#ffcf00;\n  min-height:70vh;\n  position: relative;\n}\n/*\u63A5\u4E0B\u6765\u753B\u9F3B\u5B50*/\n.nose {\n  border: 10px solid black;\n  border-color: black transparent transparent;\n  border-bottom: none;\n  width: 0px;\n  height: 0px;\n  position: relative;\n  left: 50%;\n  top: 100px;\n  margin-left: -10px;\n  z-index: 10;\n}\n.yuan {\n  position: absolute;\n  width: 20px;\n  height: 6px;\n  top: -16px;\n  left: -10px;\n  border-radius: 10px 10px 0 0;\n  background: black;\n}\n/*\u753B\u773C\u775B*/\n.eye {\n  border: 2px solid #000;\n  width: 64px;\n  height: 64px;\n  position: absolute;\n  left: 50%;\n  top: 55px;\n  margin-left: -32px;\n  background: #2e2e2e;\n  border-radius: 50%;\n}\n.eye::before {\n  content: \"\";\n  display: block;\n  border: 3px solid #000;\n  width: 30px;\n  height: 30px;\n  background: #fff;\n  border-radius: 50%;\n  position: relative;\n  left: 4px;\n  top: 2px;\n  animation: eyeMove 3s infinite;\n}\n/*\u753B\u5634\u5DF4*/\n.mouth {\n  width: 200px;\n  height: 200px;\n  position: absolute;\n  left: 50%;\n  top: 125px;\n  margin-left: -100px;\n}\n.mouth .up {\n  position: relative;\n  top: -20px;\n  z-index: 1;\n}\n.mouth .up .lip {\n  border: 3px solid black;\n  height: 30px;\n  width: 100px;\n  background: #ffcf00;\n  border-top-color: transparent;\n  border-right-color: transparent;\n  position: relative;\n  position: absolute;\n  left: 50%;\n  margin-left: -50px;\n}\n.mouth .up .lip.left {\n  border-radius: 0 0 0 50px;\n  transform: rotate(-15deg) translateX(-53px);\n}\n.mouth .up .lip.right {\n  border-radius: 0 0 50px 0;\n  transform: rotate(15deg) translateX(53px);\n}\n.mouth .down {\n  height: 180px;\n  position: absolute;\n  top: 5px;\n  width: 100%;\n  overflow: hidden;\n  animation: mouthMove 3s infinite;\n}\n.mouth .down .yuan1 {\n  border: 3px solid black;\n  width: 150px;\n  height: 1000px;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  margin-left: -75px;\n  border-radius: 75px/300px;\n  background: #9b000a;\n  overflow: hidden;\n}\n.mouth .down .yuan1 .yuan2 {\n  width: 200px;\n  height: 300px;\n  background: #ff485f;\n  position: absolute;\n  bottom: -155px;\n  left: 50%;\n  margin-left: -100px;\n  border-radius: 100px;\n}\n/*\u753B\u8138\u988A*/\n.cheek {\n  position: absolute;\n  left: 50%;\n  border: 3px solid black;\n  width: 84px;\n  height: 84px;\n  top: 155px;\n  margin-left: -44px;\n  z-index: 3;\n  animation: cheekMove 3s infinite;\n}\n/*\u518D\u52A0\u4E24\u6761\u5C0F\u624B*/\n.hand {\n  position: absolute;\n  left: 50%;\n  top: 360px;\n  margin-left: -60px;\n  animation: handMove 1s infinite;\n}\n.hand.left {\n  transform: translateX(-90px);\n}\n.hand.right {\n  transform: translateX(96px) rotateY(180deg);\n}\n/*\u7CBE\u7075\u7403*/\n.box {\n  width: 100px;\n  height: 100px;\n  border: 3px solid #fff;\n  border-radius: 50%;\n  position: relative;\n  box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);\n  left: 50%;\n  top: 354px;\n  margin-left: -56px;\n  animation: box-rotate 4s ease-in-out infinite alternate;\n}\n.box_main {\n  width: 98px;\n  height: 98px;\n  border-radius: 50%;\n  background: red;\n  border: 1px solid #333;\n  position: absolute;\n  top: 0;\n  left: 0;\n  overflow: hidden;\n}\n.box_main::before {\n  content: \"\";\n  display: block;\n  width: 98px;\n  height: 40px;\n  background: #fff;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n}\n.box_main::after {\n  content: \"\";\n  width: 98px;\n  height: 18px;\n  background: rgb(59, 53, 67);\n  position: absolute;\n  top: 50%;\n  left: 0;\n  margin-top: -6px;\n}\n.box_circle {\n  width: 36px;\n  height: 36px;\n  border: 4px solid rgb(59, 53, 67);\n  border-radius: 50%;\n  background: #fff;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  margin-left: -18px;\n  margin-top: -16px;\n  z-index: 5;\n}\n.box_circle::after {\n  content: \"\";\n  width: 18px;\n  height: 18px;\n  border: 1px solid rgb(59, 53, 67);\n  border-radius: 50%;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-left: -9px;\n  margin-top: -9px;\n  animation: bg_change 4s infinite;\n}\n";
 var player = {
   id: undefined,
   time: 100,
@@ -150,8 +135,8 @@ var player = {
   },
   n: 1,
   init: function init() {
-    player.ui.demo.innerText = _css.default.substr(0, player.n);
-    player.ui.demo2.innerHTML = _css.default.substr(0, player.n);
+    player.ui.demo.innerText = string.substr(0, player.n);
+    player.ui.demo2.innerHTML = string.substr(0, player.n);
     player.bindEvents();
     player.play();
   },
@@ -167,13 +152,13 @@ var player = {
   run: function run() {
     player.n += 1;
 
-    if (player.n > _css.default.length) {
+    if (player.n > string.length) {
       window.clearInterval(player.id);
       return;
     }
 
-    player.ui.demo.innerText = _css.default.substr(0, player.n);
-    player.ui.demo2.innerHTML = _css.default.substr(0, player.n);
+    player.ui.demo.innerText = string.substr(0, player.n);
+    player.ui.demo2.innerHTML = string.substr(0, player.n);
     player.ui.demo.scrollTop = player.ui.demo.scrollHeight;
   },
   play: function play() {
@@ -204,7 +189,7 @@ var $sound = $("#sound").get(0);
 $mouth.on("mouseover", function () {
   $sound.play();
 });
-},{"./css.js":"css.js"}],"C:/Users/39283/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"C:/Users/39283/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -232,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "5370" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14660" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
